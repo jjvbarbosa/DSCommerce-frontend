@@ -1,0 +1,9 @@
+#catalog-section {
+    padding: 20px 0;
+}
+
+.dsc-catalog-cards {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+}
