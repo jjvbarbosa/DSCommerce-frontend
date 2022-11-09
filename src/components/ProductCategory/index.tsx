@@ -4,7 +4,7 @@ type Props = {
     name: string;
 }
 
-export default function ProductCategory({name}: Props) {
+export default function ProductCategory({ name }: Props) {
     return (
         <div className="dsc-category">
             {name}
