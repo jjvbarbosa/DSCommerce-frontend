@@ -8,6 +8,11 @@ export default function Cart() {
 
     const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
 
+    function handleClearClick() {
+        cartService.clearCart();
+        setCart(cartService.getCart());
+    }
+
     return (
         <main>
             <section id="cart-container-section" className="dsc-container">
@@ -16,7 +21,7 @@ export default function Cart() {
                         ?
                         (
                             <div>
-                                <h2 className="dsc-seaction-title dsc-mb20">Seu carrinho está vazio</h2>
+                                <h2 className="dsc-section-title dsc-mb20">Seu carrinho está vazio</h2>
                             </div>
                         )
                         :
@@ -59,6 +64,9 @@ export default function Cart() {
                             Continuar comprando
                         </div>
                     </Link>
+                    <div onClick={handleClearClick} className="dsc-btn dsc-btn-white">
+                        Limpar carrinho
+                    </div>
 
                 </div>
             </section>
